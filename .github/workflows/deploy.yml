@@ -1,0 +1,26 @@
+name: Deploy React Vite
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React
+        run: npm run build
+
+      - name: Deploy to Nginx VM
+        run: |
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" \
+            dist/ vmnodejs@192.168.180.20:/var/www/portofarhan/
