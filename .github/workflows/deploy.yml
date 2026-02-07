@@ -22,5 +22,5 @@ jobs:
       - name: Deploy to Nginx VM
         run: |
           rsync -avz --delete \
-            -e "ssh nginx-vm -o StrictHostKeyChecking=no" \
-            dist/ vmnodejs@192.168.180.20:/var/www/portofarhan/
+            -e "ssh -o StrictHostKeyChecking=no" \
+            dist/ nginx-vm:/var/www/portofarhan/
