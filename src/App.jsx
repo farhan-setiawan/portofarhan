@@ -27,7 +27,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        CI/CD Pipeline GitHub Self-Hosted Runners Vite React App
+        CI/CD Pipeline GitHub Self-Hosted Runners Vite React App, Hardeningnya Capek Juga
       </p>
     </>
   )
