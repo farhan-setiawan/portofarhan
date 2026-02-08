@@ -1,37 +1,160 @@
-export default function Stack({ activeItem, setActiveItem }) {
-  const stackData = {
-    cloudflare: {
+export const stackData = {
+  topology: {
+      logo: "",
+      title: "Home Server Topology",
+      image: "/images/network topology.png",
+      description:
+        "My Home Server Topology.",
+    },
+  cloudflare: {
+      logo: "/images/cloudflare logo.png",
       title: "Cloudflare DNS",
       image: "/images/cloudflare.png",
       description:
         "DNS configuration on Cloudflare with proxy and SSL settings.",
     },
     mikrotik: {
+      logo: "/images/mikrotik logo.png",
       title: "MikroTik CHR",
       image: "/images/mikrotik.png",
       description:
-        "CHR running on Proxmox with NAT and firewall rules.",
+        "CHR running on Cloud with NAT, port-forwarding, firewall rules and public IP adress.",
     },
     wireguard: {
+      logo: "/images/WireGuard logo.png",
       title: "WireGuard",
       image: "/images/WireGuard.png",
       description:
-        "Secure VPN tunnel between sites.",
+        "Light weight secure VPN tunnel between sites and network devices.",
     },
     ovpn: {
+      logo: "/images/OVPN logo.png",
       title: "OVPN",
       image: "/images/OVPN.png",
       description:
-        "Open VPN tunnel between sites.",
+        "Reliable secure open VPN tunnel between sites.",
     },
-  }
+    proxmox: {
+      logo: "/images/proxmox logo.png",
+      title: "Proxmox VE",
+      image: "/images/proxmox.png",
+      description:
+        "Powerful open-source hypervisor for virtual environment.",
+    },
+    ubuntu: {
+      logo: "/images/ubuntu logo.png",
+      title: "Ubuntu Server",
+      image: "/images/ubuntu.png",
+      description:
+        "Light weight open-source operating-system.",
+    },
+    nginx: {
+      logo: "/images/nginx logo.png",
+      title: "NGINX",
+      image: "/images/nginx.png",
+      description:
+        "Flexible reverse proxy and load balancer.",
+    },
+    freepbx: {
+      logo: "/images/freepbx logo.png",
+      title: "FreePBX",
+      image: "/images/freepbx.png",
+      description:
+        "Open-source VoIP server.",
+    },
+    docker: {
+      logo: "/images/docker logo.png",
+      title: "Docker Container",
+      image: "/images/docker.png",
+      description:
+        "Containerized open-source aplication.",
+    },
+    adguard: {
+      logo: "/images/adguard logo.png",
+      title: "AdGuard Home",
+      image: "/images/adguard.png",
+      description:
+        "DNS filter for local network, protect you from scam website.",
+    },
+    nextcloud: {
+      logo: "/images/nextcloud logo.png",
+      title: "NextCloud",
+      image: "/images/nextcloud.png",
+      description:
+        "Your private cloud storage.",
+    },
+    odoo: {
+      logo: "/images/odoo logo.png",
+      title: "Odoo",
+      image: "/images/odoo.png",
+      description:
+        "Integrated all-in-one platform, ERP, CRM, e-commerce, etc.",
+    },
+    eveng: {
+      logo: "/images/eveng logo.png",
+      title: "EVE-NG",
+      image: "/images/eveng.png",
+      description:
+        "Multi-vendor networking virtualization.",
+    },
+    zabbix: {
+      logo: "/images/zabbix logo.png",
+      title: "Zabbix",
+      image: "/images/zabbix.png",
+      description:
+        "Powerful open-source network monitoring software.",
+    },
+    nodejs: {
+      logo: "/images/nodejs logo.png",
+      title: "NodeJS",
+      image: "/images/nodejs.png",
+      description:
+        "Runtime environment JavaScript open-source.",
+    },
+    react: {
+      logo: "/images/react logo.png",
+      title: "React Vite",
+      image: "/images/react.png",
+      description:
+        "Library JavaScript open-source front-end.",
+    },
+}
+export default function Stack({ activeItem, setActiveItem }) {
+  // const stackData = {
+  //   cloudflare: {
+  //     title: "Cloudflare DNS",
+  //     image: "/images/cloudflare.png",
+  //     description:
+  //       "DNS configuration on Cloudflare with proxy and SSL settings.",
+  //   },
+  //   mikrotik: {
+  //     title: "MikroTik CHR",
+  //     image: "/images/mikrotik.png",
+  //     description:
+  //       "CHR running on Proxmox with NAT and firewall rules.",
+  //   },
+  //   wireguard: {
+  //     title: "WireGuard",
+  //     image: "/images/WireGuard.png",
+  //     description:
+  //       "Secure VPN tunnel between sites.",
+  //   },
+  //   ovpn: {
+  //     title: "OVPN",
+  //     image: "/images/OVPN.png",
+  //     description:
+  //       "Open VPN tunnel between sites.",
+  //   },
+  // }
 
   return (
-    <section className="mt-16">
-      <h2 className="text-2xl font-bold mb-8 text-gray-900">
+    <section className="mt-8">
+      <h2 className="text-2xl font-bold mb-2 text-gray-900">
         NETWORK & VIRTUALIZATION STACK
       </h2>
-
+      <p className="mb-5 italic text-gray-400">
+        "see network topology..."
+      </p>
       <div className="space-y-4">
         {Object.entries(stackData).map(([key, item]) => {
           const isActive = activeItem === key
@@ -79,6 +202,10 @@ export default function Stack({ activeItem, setActiveItem }) {
                 `}
               >
                 <div className="p-4 bg-white border rounded-lg shadow-sm">
+                  <img
+                    src={item.logo}
+                    className="mb-4 rounded"
+                  />
                   <img
                     src={item.image}
                     alt={item.title}

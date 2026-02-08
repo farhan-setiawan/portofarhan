@@ -1,6 +1,6 @@
 export default function Portfolio() {
   return (
-    <section className="mb-24">
+    <section className="mb-16 -mt-10">
       <h2 className="text-3xl font-semibold mb-10 tracking-wide">
         MY PORTFOLIO:
         <br />
