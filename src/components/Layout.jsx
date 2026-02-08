@@ -12,7 +12,7 @@ export default function Layout({ children, activeItem }) {
       <div className="hidden md:block w-full border-l relative">
         <div className="sticky top-0 h-screen flex items-center justify-center p-12 overflow-auto">
             {activeItem ? (
-            <div className="max-w-xl transition-all duration-300 ">
+            <div className="max-w-xl transition-all duration-500 ease-in-out">
                 {/* <img
                 src={stackData[activeItem].logo}
                 className="mb-6 rounded h-20 object-contain w-full "
@@ -21,7 +21,7 @@ export default function Layout({ children, activeItem }) {
                   <img
                     src={stackData[activeItem].logo}
                     alt={`${stackData[activeItem].title} logo`}
-                    className="mb-6 h-20 w-auto object-contain"
+                    className="mb-6 h-20 w-auto object-contain w-full"
                   />
         )       }
                 {/* <img
