@@ -1,35 +1,51 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+//import reactLogo from './assets/react.svg'
+//import viteLogo from '/vite.svg'
+//import './App.css'
+
+//function App() {
+  //const [count, setCount] = useState(0)
+
+  //return (
+    //<>
+      //<div>
+        //<a href="https://vite.dev" target="_blank">
+          //<img src={viteLogo} className="logo" alt="Vite logo" />
+        //</a>
+        //<a href="https://react.dev" target="_blank">
+          //<img src={reactLogo} className="logo react" alt="React logo" />
+        //</a>
+      //</div>
+      //<h1>CI/CD GitHub Pipeline + Self Hosted Runners</h1>
+      //<h1>Vite + React</h1>
+      //<div className="card">
+        //<button onClick={() => setCount((count) => count + 1)}>
+          //count is {count}
+        //</button>
+        //<p>
+          //Edit <code>src/App.jsx</code> and save to test HMR
+        //</p>
+      //</div>
+      //<p className="read-the-docs">
+        //CI/CD Pipeline GitHub Self-Hosted Runners Vite React App, Hardeningnya Capek Juga
+      //</p>
+    //</>
+  //)
+//}
+
+//export default App
+import Layout from "./components/Layout"
+import Intro from "./components/Intro"
+import Portfolio from "./components/Portfolio"
+import Stack from "./components/Stack"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>CI/CD GitHub Pipeline + Self Hosted Runners</h1>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        CI/CD Pipeline GitHub Self-Hosted Runners Vite React App, Hardeningnya Capek Juga
-      </p>
-    </>
+    <Layout>
+      <Intro />
+      <Portfolio />
+      <Stack />
+    </Layout>
   )
 }
 
