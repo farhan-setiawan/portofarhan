@@ -1,32 +1,5 @@
 import {stackData} from "./Stack"
 export default function Layout({ children, activeItem }) {
-  // const stackData = {
-  //   cloudflare: {
-  //     title: "Cloudflare DNS",
-  //     image: "/images/cloudflare.png",
-  //     description:
-  //       "DNS configuration on Cloudflare with proxy and SSL settings.",
-  //   },
-  //   mikrotik: {
-  //     title: "MikroTik CHR",
-  //     image: "/images/mikrotik.png",
-  //     description:
-  //       "CHR running on Proxmox with NAT and firewall rules.",
-  //   },
-  //   wireguard: {
-  //     title: "WireGuard",
-  //     image: "/images/WireGuard.png",
-  //     description:
-  //       "Secure VPN tunnel between sites.",
-  //   },
-  //   ovpn: {
-  //     title: "OVPN",
-  //     image: "/images/OVPN.png",
-  //     description:
-  //       "Open VPN tunnel between sites.",
-  //   },
-  // }
-
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-white">
 
@@ -40,14 +13,30 @@ export default function Layout({ children, activeItem }) {
         <div className="sticky top-0 h-screen flex items-center justify-center p-12 overflow-auto">
             {activeItem ? (
             <div className="max-w-xl transition-all duration-300 ">
-                <img
+                {/* <img
                 src={stackData[activeItem].logo}
                 className="mb-6 rounded h-20 object-contain w-full "
-                />
-                <img
+                /> */}
+                {stackData[activeItem].logo && (
+                  <img
+                    src={stackData[activeItem].logo}
+                    alt={`${stackData[activeItem].title} logo`}
+                    className="mb-6 h-20 w-auto object-contain"
+                  />
+        )       }
+                {/* <img
                 src={stackData[activeItem].image}
                 className="mb-6 rounded shadow"
-                />
+                /> */}
+                {/* MAIN IMAGE */}
+                {stackData[activeItem].image && (
+                  <img
+                    src={stackData[activeItem].image}
+                    alt={stackData[activeItem].title}
+                    className="mb-6 rounded shadow"
+                    loading="lazy"
+                  />
+                )}
                 <h3 className="text-2xl font-semibold mb-2">
                 {stackData[activeItem].title}
                 </h3>

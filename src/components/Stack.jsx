@@ -1,6 +1,6 @@
 export const stackData = {
   topology: {
-      logo: "",
+      logo: null,
       title: "Home Server Topology",
       image: "/images/network topology.png",
       description:
@@ -120,32 +120,6 @@ export const stackData = {
     },
 }
 export default function Stack({ activeItem, setActiveItem }) {
-  // const stackData = {
-  //   cloudflare: {
-  //     title: "Cloudflare DNS",
-  //     image: "/images/cloudflare.png",
-  //     description:
-  //       "DNS configuration on Cloudflare with proxy and SSL settings.",
-  //   },
-  //   mikrotik: {
-  //     title: "MikroTik CHR",
-  //     image: "/images/mikrotik.png",
-  //     description:
-  //       "CHR running on Proxmox with NAT and firewall rules.",
-  //   },
-  //   wireguard: {
-  //     title: "WireGuard",
-  //     image: "/images/WireGuard.png",
-  //     description:
-  //       "Secure VPN tunnel between sites.",
-  //   },
-  //   ovpn: {
-  //     title: "OVPN",
-  //     image: "/images/OVPN.png",
-  //     description:
-  //       "Open VPN tunnel between sites.",
-  //   },
-  // }
 
   return (
     <section className="mt-8">
