@@ -10,23 +10,61 @@ export default function Portfolio() {
       <div className="space-y-6 text-xl text-gray-700">
 
         <p>
-          farhansetiawan.my.id — React + Vite + CI/CD
+            <a
+                href="https://farhansetiawan.my.id"
+                target="_self"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline hover:text-blue-800 transition">
+                farhansetiawan.my.id 
+            </a>
+          — React + Vite + 
+            <a
+                href="https://github.com/farhan-setiawan/portofarhan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline hover:text-blue-800 transition">
+                CI/CD
+            </a>
         </p>
 
         <p>
-          jokijoy.biz.id — Business Landing Page
+            <a
+                href="https://jokijoy.biz.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline hover:text-blue-800 transition">
+                    jokijoy.biz.id — Business Landing Page
+            </a>
         </p>
 
         <p>
-          cloud.jokijoy.biz.id — Nextcloud
+            <a
+                href="https://cloud.jokijoy.biz.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline hover:text-blue-800 transition">
+                    cloud.jokijoy.biz.id — Nextcloud
+            </a>
         </p>
 
         <p>
-          dns.jokijoy.biz.id — AdGuard Home
+            <a
+                href="https://dns.jokijoy.biz.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline hover:text-blue-800 transition">
+                    dns.jokijoy.biz.id — AdGuard Home
+            </a>
         </p>
 
         <p>
-          eve.jokijoy.biz.id — EVE-NG Lab
+            <a
+                href="https://eve.jokijoy.biz.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline hover:text-blue-800 transition">
+                    eve.jokijoy.biz.id — EVE-NG Lab
+            </a>
         </p>
 
       </div>
