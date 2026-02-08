@@ -17,13 +17,13 @@ export default function Portfolio() {
                 className="text-blue-600 hover:underline hover:text-blue-800 transition">
                 farhansetiawan.my.id 
             </a>
-          — React + Vite + 
+                 — React + Vite + 
             <a
                 href="https://github.com/farhan-setiawan/portofarhan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline hover:text-blue-800 transition">
-                CI/CD
+                 CI/CD
             </a>
         </p>
 
