@@ -28,6 +28,7 @@ a:hover {
 
 html {
   color-scheme: light;
+  background-color: #ffffff;
 }
 
 body {
@@ -36,6 +37,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #ffffff;
+  color: #111827;
 }
 
 h1 {
@@ -73,4 +76,19 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #ffffff;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #111827;
+  }
+}
+
+* {
+  -webkit-text-size-adjust: 100%;
 }
