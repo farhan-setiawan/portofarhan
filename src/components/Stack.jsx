@@ -1,9 +1,29 @@
 export default function Stack({ activeItem, setActiveItem }) {
-  const items = {
-    cloudflare: "Cloudflare DNS",
-    mikrotik: "MikroTik CHR",
-    wireguard: "WireGuard",
-    ovpn: "OVPN",
+  const stackData = {
+    cloudflare: {
+      title: "Cloudflare DNS",
+      image: "/images/cloudflare.png",
+      description:
+        "DNS configuration on Cloudflare with proxy and SSL settings.",
+    },
+    mikrotik: {
+      title: "MikroTik CHR",
+      image: "/images/mikrotik.png",
+      description:
+        "CHR running on Proxmox with NAT and firewall rules.",
+    },
+    wireguard: {
+      title: "WireGuard",
+      image: "/images/WireGuard.png",
+      description:
+        "Secure VPN tunnel between sites.",
+    },
+    ovpn: {
+      title: "OVPN",
+      image: "/images/OVPN.png",
+      description:
+        "Open VPN tunnel between sites.",
+    }
   }
 
   return (
@@ -12,20 +32,33 @@ export default function Stack({ activeItem, setActiveItem }) {
         NETWORK & VIRTUALIZATION STACK
       </h2>
 
-      {Object.entries(items).map(([key, label]) => (
-        <button
-          key={key}
-          onClick={() =>
-            setActiveItem(activeItem === key ? null : key)
-          }
-          className={`block text-left px-4 py-2 rounded ${
-            activeItem === key
-              ? "bg-gray-200"
-              : "bg-gray-100"
-          }`}
-        >
-          {label}
-        </button>
+      {Object.entries(stackData).map(([key, item]) => (
+        <div key={key}>
+
+          {/* Button */}
+          <button
+            onClick={() =>
+              setActiveItem(activeItem === key ? null : key)
+            }
+            className="w-full text-left px-4 py-3 rounded bg-gray-100"
+          >
+            {item.title}
+          </button>
+
+          {/* ACCORDION CONTENT (MOBILE ONLY) */}
+          {activeItem === key && (
+            <div className="md:hidden mt-3 p-4 bg-white border rounded shadow-sm">
+              <img
+                src={item.image}
+                className="mb-4 rounded"
+              />
+              <p className="text-gray-600">
+                {item.description}
+              </p>
+            </div>
+          )}
+
+        </div>
       ))}
     </section>
   )
