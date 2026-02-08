@@ -1,23 +1,60 @@
-export default function Layout({ children }) {
+export default function Layout({ children, activeItem }) {
+  const stackData = {
+    cloudflare: {
+      title: "Cloudflare DNS",
+      image: "/images/cloudflare.png",
+      description:
+        "DNS configuration on Cloudflare with proxy and SSL settings.",
+    },
+    mikrotik: {
+      title: "MikroTik CHR",
+      image: "/images/mikrotik.png",
+      description:
+        "CHR running on Proxmox with NAT and firewall rules.",
+    },
+    wireguard: {
+      title: "WireGuard",
+      image: "/images/WireGuard.png",
+      description:
+        "Secure VPN tunnel between sites.",
+    },
+    ovpn: {
+      title: "OVPN",
+      image: "/images/OVPN.png",
+      description:
+        "Open VPN tunnel between sites.",
+    }
+  }
+
   return (
-    <div className="min-h-screen bg-white text-black">
-      <div className="flex">
+    <div className="min-h-screen flex bg-white">
 
-        {/* LEFT SIDE */}
-        <div className="w-full lg:w-2/3 px-8 lg:px-20 py-16">
-          {children}
-        </div>
+      {/* LEFT SIDE */}
+      <div className="w-1/2 p-12">
+        {children}
+      </div>
 
-        {/* RIGHT SIDE */}
-        <div className="hidden lg:flex w-1/3 relative justify-center">
-          <div className="absolute left-0 top-0 h-full border-l border-gray-300"></div>
+      {/* RIGHT SIDE */}
+      <div className="w-1/2 border-l flex items-center justify-center p-12">
 
-          <div className="flex items-center justify-center h-screen sticky top-0">
-            <div className="text-6xl font-light text-gray-200 tracking-widest rotate-90">
-              PRODUCTION
-            </div>
+        {activeItem ? (
+          <div className="max-w-xl">
+            <img
+              src={stackData[activeItem].image}
+              className="mb-6 rounded shadow"
+            />
+            <h3 className="text-2xl font-semibold mb-2">
+              {stackData[activeItem].title}
+            </h3>
+            <p className="text-gray-600">
+              {stackData[activeItem].description}
+            </p>
           </div>
-        </div>
+        ) : (
+          <h1 className="text-6xl text-gray-200 rotate-90 tracking-widest">
+            PRODUCTION
+          </h1>
+        )}
 
       </div>
     </div>
