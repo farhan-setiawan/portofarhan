@@ -1,6 +1,6 @@
 export default function Intro() {
   return (
-    <section className="mb-24">
+    <section className="w-full md:w-full mb-24">
       <h1 className="text-5xl lg:text-7xl font-bold tracking-wide">
         PORTFOLIO
         <br />

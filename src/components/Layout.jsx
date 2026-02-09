@@ -1,39 +1,32 @@
 import {stackData} from "./Stack"
 export default function Layout({ children, activeItem }) {
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-white">
+    <div className="flex flex-col md:grid grid-cols-6 w-screen h-screen bg-white">
 
       {/* LEFT SIDE */}
-      <div className="w-full md:w-1/2 p-8 md:p-12">
+      <div className="w-full md:max-w-1/4 p-8 col-span-2">
         {children}
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="hidden md:block w-full border-l relative">
-        <div className="sticky top-0 h-screen flex items-center justify-center p-12 overflow-auto">
+      <div className="hidden md:block border-l col-span-4">
+        <div className="sticky top-0 h-screen flex items-center justify-center p-12 overflow-hidden">
             {activeItem ? (
-            <div className="max-w-xl transition-all duration-500 ease-in-out">
-                {/* <img
-                src={stackData[activeItem].logo}
-                className="mb-6 rounded h-20 object-contain w-full "
-                /> */}
+            <div className="max-w-full max-h-full flex flex-col item-center">
                 {stackData[activeItem].logo && (
                   <img
                     src={stackData[activeItem].logo}
                     alt={`${stackData[activeItem].title} logo`}
-                    className="mb-6 h-20 w-auto object-contain w-full"
+                    className="mb-4 max-h-[100px] object-contain"
                   />
-        )       }
-                {/* <img
-                src={stackData[activeItem].image}
-                className="mb-6 rounded shadow"
-                /> */}
+                  )       
+                }
                 {/* MAIN IMAGE */}
                 {stackData[activeItem].image && (
                   <img
                     src={stackData[activeItem].image}
                     alt={stackData[activeItem].title}
-                    className="mb-6 rounded shadow"
+                    className="mb-6 rounded shadow max-w-full max-h-[50vh] object-contain"
                     loading="lazy"
                   />
                 )}
@@ -45,7 +38,7 @@ export default function Layout({ children, activeItem }) {
                 </p>
             </div>
             ) : (
-            <div className="max-w-xl transition-all duration-300">  
+            <div className="flex item-center justify-center">  
             <h1 className="text-6xl text-gray-200 rotate-90 tracking-widest">
                 PRODUCTION
             </h1>

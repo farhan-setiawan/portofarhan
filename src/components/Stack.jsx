@@ -129,7 +129,7 @@ export default function Stack({ activeItem, setActiveItem }) {
       <p className="mb-5 italic text-gray-400">
         "see network topology..."
       </p>
-      <div className="space-y-4">
+      <div className="space-y-4 min-w-1/4">
         {Object.entries(stackData).map(([key, item]) => {
           const isActive = activeItem === key
 
