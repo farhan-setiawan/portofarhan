@@ -1,7 +1,7 @@
 export default function Portfolio() {
   return (
     <section className="mb-16 -mt-10">
-      <h2 className="text-3xl font-semibold mb-10 tracking-wide">
+      <h2 className="text-3xl font-semibold mb-10 ">
         MY PORTFOLIO:
         <br />
         PRODUCTION HOME SERVER
@@ -17,7 +17,7 @@ export default function Portfolio() {
                 className="text-blue-600 hover:underline hover:text-blue-800 transition">
                 farhansetiawan.my.id 
             </a>
-                {" — "} React + Vite + {" "}
+                {" — "} React + Vite + Tailwind + {" "}
             <a
                 href="https://github.com/farhan-setiawan/portofarhan"
                 target="_blank"
@@ -33,7 +33,7 @@ export default function Portfolio() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline hover:text-blue-800 transition">
-                    jokijoy.biz.id — Business Landing Page
+                    jokijoy.biz.id — Odoo Business Page
             </a>
         </p>
 

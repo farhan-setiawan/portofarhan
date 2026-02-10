@@ -129,7 +129,7 @@ export default function Stack({ activeItem, setActiveItem }) {
       <p className="mb-5 italic text-gray-400">
         "see network topology..."
       </p>
-      <div className="space-y-4 min-w-1/4">
+      <div className="space-y-4 md:max-h-[220px] md:overflow-y-auto">
         {Object.entries(stackData).map(([key, item]) => {
           const isActive = activeItem === key
 
@@ -148,9 +148,13 @@ export default function Stack({ activeItem, setActiveItem }) {
                   border
                   box-border
                   text-left
+                  font-medium
+                  text-sm
+                  sm:text-base
+                  lg:text-lg
                   transition-all
                   duration-200
-                  font-medium
+                  
                   ${
                     isActive
                       ? "bg-gray-900 text-white border-gray-900"
