@@ -97,10 +97,10 @@ export const stackData = {
       description:
         "Multi-vendor networking virtualization.",
     },
-    zabbix: {
-      logo: "/images/zabbix logo.png",
-      title: "Zabbix",
-      image: "/images/zabbix.png",
+    pulse: {
+      logo: "/images/pulse logo.png",
+      title: "Pulse",
+      image: "/images/pulse.png",
       description:
         "Powerful open-source network monitoring software.",
     },

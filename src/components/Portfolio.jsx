@@ -2,7 +2,7 @@ export default function Portfolio() {
   return (
     <section className="mb-16 -mt-10">
       <h2 className="text-3xl font-semibold mb-10 ">
-        MY PORTFOLIO:
+        MY SELF-PROJECT:
         <br />
         PRODUCTION HOME SERVER
       </h2>
