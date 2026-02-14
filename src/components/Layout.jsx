@@ -8,8 +8,8 @@ export default function Layout({ children, activeItem }) {
         {children}
       </div>
       {/* RIGHT SIDE */}
-      <div className="hidden md:block border-l col-span-4">
-        <div className="sticky top-0 h-screen flex items-center justify-center p-12 relative">
+      <div className="hidden md:block border-l col-span-4 ">
+        <div className="sticky top-0 h-screen flex items-center justify-center p-12 relative overflow-y-auto">
             {activeItem ? (
             <div 
               key={`${activeItem}-${Date.now()}`}
@@ -23,20 +23,22 @@ export default function Layout({ children, activeItem }) {
                   )       
                 }
                 {/* MAIN IMAGE */}
-                {stackData[activeItem].image && (
-                  <img
-                    src={stackData[activeItem].image}
-                    alt={stackData[activeItem].title}
-                    className="mb-6 rounded shadow max-w-full max-h-[50vh] object-contain transition-opacity duration-300 ease-in-out opacity-100 animate-fadeIn"
-                    loading="lazy"
-                  />
-                )}
+                <div className="mb-6 flex justify-center">
+                  <div className="inline-block rounded-xl shadow-lg overflow-hidden">
+                    <img
+                      src={stackData[activeItem].image}
+                      alt={stackData[activeItem].title}
+                      className="block max-h-[45vh] w-auto transition-opacity duration-300 ease-in-out opacity-100 animate-fadeIn"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
                 <h3 className="text-2xl font-semibold mb-2 transition-opacity duration-300 ease-in-out opacity-100 animate-fadeIn">
                 {stackData[activeItem].title}
                 </h3>
-                <p className="text-gray-600 transition-opacity duration-300 ease-in-out opacity-100 animate-fadeIn">
+                <div className="mb-4 text-gray-600 transition-opacity duration-300 ease-in-out opacity-100 animate-fadeIn text-justify ">
                 {stackData[activeItem].description}
-                </p>
+                </div>
             </div>
             ) : (
             <div className="flex item-center justify-center transition-opacity duration-300 ease-in-out opacity-100 animate-fadeIn">  
