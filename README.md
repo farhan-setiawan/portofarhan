@@ -1,20 +1,115 @@
-# React + Vite
+# Personal Infrastructure Portfolio – Self Hosted DevOps Environment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for my personal portfolio website, 
+fully self-hosted on my private home server infrastructure.
 
-Currently, two official plugins are available:
+Unlike typical static portfolio hosting, this project is deployed through a 
+self-managed infrastructure stack including virtualization, containerization, 
+reverse proxy, DNS management, and CI/CD automation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🧠 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio is not only a frontend project (React + Vite + Tailwind), 
+but also a real-world infrastructure implementation demonstrating:
 
-## Expanding the ESLint configuration
+- Virtualization with Proxmox VE
+- Reverse Proxy with NGINX
+- DNS & SSL management using Cloudflare
+- GitHub Actions CI/CD with Self-Hosted Runner
+- Dockerized services deployment
+- Secure remote access via VPN (WireGuard & OpenVPN)
+- Network segmentation using MikroTik Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project reflects hands-on DevOps, SysAdmin, and Infrastructure Engineering capabilities.
 
-## Hardening
+---
 
-hardening .github/workflows
+## 🏗 Infrastructure Architecture
+
+### Hypervisor Layer
+- Proxmox VE
+- Multiple VM isolation
+- Resource allocation management
+
+### Virtual Machines
+- Ubuntu Server (Docker Host)
+- FreePBX Server
+- Nextcloud Server
+- Odoo Server
+- EVE-NG Lab Environment
+- VPN Server (WireGuard / OpenVPN)
+
+### Containerization
+- Docker
+- Service isolation
+- Persistent volume management
+
+---
+
+## 🚀 CI/CD Pipeline
+
+Deployment is automated using:
+
+- GitHub Actions
+- Self-hosted Runner (inside private network)
+- Auto build on push to main branch
+- Automatic deployment to production server
+
+Workflow:
+1. Developer pushes code to GitHub
+2. GitHub Actions triggers pipeline
+3. Self-hosted runner pulls latest changes
+4. Build & deploy process executed
+5. NGINX serves updated production build
+
+---
+
+## 🌐 Networking & Security
+
+- MikroTik Router as core gateway
+- VLAN segmentation
+- Reverse Proxy with SSL (Cloudflare Full Strict & Let's Encrypt)
+- VPN-only access for internal services
+- Rate limiting & firewall rules
+- Selective bot allowlisting for recruiter visibility
+
+---
+
+## 📊 Infrastructure Metrics (Live Environment)
+
+- Uptime: 99%+
+- Total VMs: 7
+- Total Services Running: 9
+- Average CPU Usage: 20%
+- Average RAM Usage: 70%
+
+(Updated periodically)
+
+---
+
+## 🛠 Tech Stack (Frontend)
+
+- React
+- Vite
+- TailwindCSS
+- NodeJS
+
+---
+
+## 🎯 Purpose
+
+This project demonstrates:
+
+- Real infrastructure ownership
+- Full deployment lifecycle control
+- Secure service exposure to public internet
+- Automation mindset
+- Production-grade architecture thinking
+
+---
+
+## 📄 License
+
+MIT License

@@ -2,7 +2,7 @@ export const stackData = {
   topology: {
       logo: null,
       title: "Home Server Topology",
-      image: "/images/network topology.png",
+      image: "/images/topologi.png",
       description: (
         <>
           <p className="mb-4">
@@ -346,11 +346,11 @@ export const stackData = {
           <h4 className="font-semibold mt-4 mb-2">Infrastruktur saat ini:</h4>
           <ul className="list-disc list-inside space-y-1 mb-4">
             <li>Uptime server: 124+ hari tanpa restart</li>
-            <li>Jumlah VM aktif: 8 Virtual Machines</li>
-            <li>Jumlah container aktif: 6 Docker Containers</li>
-            <li>Total services running: 15+ services</li>
+            <li>Jumlah VM aktif: 7 Virtual Machines</li>
+            <li>Jumlah container aktif: 2 Docker Containers</li>
+            <li>Total services running: 9+ services</li>
             <li>Average CPU usage: 18–25%</li>
-            <li>Average RAM usage: 52% dari 16GB</li>
+            <li>Average RAM usage: 52-70% dari 24GB</li>
             <li>Storage utilization: 68%</li>
           </ul>
         </>
