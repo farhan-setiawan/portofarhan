@@ -7,6 +7,8 @@ Unlike typical static portfolio hosting, this project is deployed through a
 self-managed infrastructure stack including virtualization, containerization, 
 reverse proxy, DNS management, and CI/CD automation.
 
+[![Live Website](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://farhansetiawan.my.id)
+
 ---
 
 ## 🧠 Project Overview
