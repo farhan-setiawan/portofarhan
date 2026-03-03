@@ -1,4 +1,4 @@
-import {stackData} from "./Stack"
+import {combinedStackData} from "./StackRegistry"
 export default function Layout({ children, activeItem }) {
   return (
     <div className="flex flex-col md:grid grid-cols-6 w-screen h-screen bg-white">
@@ -14,10 +14,10 @@ export default function Layout({ children, activeItem }) {
             <div 
               key={`${activeItem}-${Date.now()}`}
               className="max-w-full max-h-full flex flex-col item-center">
-                {stackData[activeItem].logo && (
+                {combinedStackData[activeItem]?.logo && (
                   <img
-                    src={stackData[activeItem].logo}
-                    alt={`${stackData[activeItem].title} logo`}
+                    src={combinedStackData[activeItem].logo}
+                    alt={`${combinedStackData[activeItem].title} logo`}
                     className="mb-4 max-h-[100px] object-contain transition-opacity duration-300 ease-in-out opacity-100 animate-fadeIn"
                   />
                   )       
@@ -26,18 +26,18 @@ export default function Layout({ children, activeItem }) {
                 <div className="mb-6 flex justify-center">
                   <div className="inline-block rounded-xl shadow-lg overflow-hidden">
                     <img
-                      src={stackData[activeItem].image}
-                      alt={stackData[activeItem].title}
+                      src={combinedStackData[activeItem].image}
+                      alt={combinedStackData[activeItem].title}
                       className="block max-h-[45vh] w-auto transition-opacity duration-300 ease-in-out opacity-100 animate-fadeIn"
                       loading="lazy"
                     />
                   </div>
                 </div>
                 <h3 className="text-2xl font-semibold mb-2 transition-opacity duration-300 ease-in-out opacity-100 animate-fadeIn">
-                {stackData[activeItem].title}
+                {combinedStackData[activeItem].title}
                 </h3>
                 <div className="mb-4 text-gray-600 transition-opacity duration-300 ease-in-out opacity-100 animate-fadeIn text-justify ">
-                {stackData[activeItem].description}
+                {combinedStackData[activeItem].description}
                 </div>
             </div>
             ) : (
