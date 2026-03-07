@@ -61,7 +61,7 @@ export const stackData = {
       description:(
         <>
           <p className="mb-4">
-            CHR bertindak sebagai edge router di cloud yang menerima 
+            MikroTik Cloud Hosted Router bertindak sebagai edge router di cloud yang menerima 
             trafik dari Cloudflare dan mengelolanya melalui:
           </p>
           <ul className="list-disc list-inside space-y-1 mb-4">
@@ -85,8 +85,9 @@ export const stackData = {
       description:(
         <>
           <p className="mb-4">
-            Digunakan sebagai primary tunnel antara cloud CHR 
-            dan home router untuk mengamankan trafik internal.
+            Digunakan sebagai primary tunnel VPN antara MikroTik CHR 
+            dan home router untuk mengamankan trafik internal. 
+            Sangat cepat dan aman dibandingkan dengan metode tunnel lain.
           </p>
           <h4 className="font-semibold mt-4 mb-2">Optimasi yang dilakukan:</h4>
           <ul className="list-disc list-inside space-y-1 mb-4">
@@ -163,7 +164,8 @@ export const stackData = {
       description:(
         <>
           <p className="mb-4">
-            Ubuntu Server digunakan sebagai base OS untuk menjalankan berbagai layanan production.
+            Ubuntu Server digunakan sebagai base OS yang sangat ringan dan murah
+            untuk menjalankan berbagai layanan production.
           </p>
           <h4 className="font-semibold mt-4 mb-2">Konfigurasi meliputi:</h4>
           <ul className="list-disc list-inside space-y-1 mb-4">
@@ -196,7 +198,7 @@ export const stackData = {
             <li>Virtual host routing</li>
             <li>SSL termination</li>
             <li>Proxy pass ke internal VM/container</li>
-            <li>Load balancing (jika diperlukan)</li>
+            <li>Load balancing</li>
           </ul>
         </>
       ),

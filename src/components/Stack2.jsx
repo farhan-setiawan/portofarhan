@@ -26,7 +26,7 @@ export const stackData2 = {
         </>
       ),
     },
-  Surveillance: {
+  surveillance: {
       logo: "/images/surveillance logo.png",
       title: "CCTV & NVR",
       image: "/images/surveillance.png",
@@ -45,6 +45,26 @@ export const stackData2 = {
             <li>Onvif profile S untuk integrasi brand berbeda</li>
             <li>No port-forwarding to NVR</li>
           </ul>
+          <p className="mb-4">
+            Cek beberapa video review dan 
+            <a
+              href="https://youtu.be/TnrT97uuThA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline hover:text-blue-800 transition"
+            >
+            {" "}tutorial {" "}
+            </a>
+            CCTV di YouTube: 
+            <a
+              href="https://www.youtube.com/@FarhanLur"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline hover:text-blue-800 transition"
+            >
+            {" "}farhanlur {" "}
+            </a>
+          </p>
         </>
       ),
     },
@@ -81,7 +101,7 @@ export const stackData2 = {
           <p className="mb-4">
             Digunakan sebagai monitoring energy meter 
             untuk mengoptimalkan penggunaan listrik.
-            Juga automasi ketika terjadi suatu event seperti webhook pada Doorphone
+            Juga otomasi ketika terjadi suatu event seperti webhook pada Doorphone
           </p>
           <h4 className="font-semibold mt-4 mb-2">System overview:</h4>
           <ul className="list-disc list-inside space-y-1 mb-4">
