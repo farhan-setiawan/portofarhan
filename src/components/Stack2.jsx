@@ -6,14 +6,16 @@ export const stackData2 = {
       description: (
         <>
           <p className="mb-4">
-            Arsitektur ini dirancang untuk memastikan perangkat keamanan dan utilitas seperti
-            CCTV, NVR, Energy Meter, IP Phone, dan Door Bell dapat bekerja dengan maksimal.
+            This network architecture is designed to ensure that security and 
+            utility devices — such as CCTV cameras, NVR systems, energy meters, 
+            IP phones, and doorbell devices — operate reliably and efficiently 
+            within the home infrastructure.
           </p>
 
           <p className="mb-4">
-            Seluruh perangkat terhubung ke router <strong>MikroTik RB750Gr3</strong>,
-            untuk perangkat wireless akan terhubung melalui <strong>Access Point</strong>,
-            dan untuk perangkat wireline menggunakan kabel UTP.
+            All devices connected to a <strong>MikroTik RB750Gr3</strong> router, which act as the central network gateway.
+            Wireless devices connect through <strong>Access Points</strong>,
+            while wired devices are connected using UTP Ethernet cable.
           </p>
 
           <h4 className="font-semibold mt-4 mb-2">Network Segmentation Strategy:</h4>
@@ -21,8 +23,12 @@ export const stackData2 = {
             <li>VLAN 10 - Core Server</li>
             <li>VLAN 20 - CCTV & NVR</li>
             <li>VLAN 30 - IoT & Smart Device</li>
-            <li>Inter-VLAN filtering via MikroTik firewall</li>
           </ul>
+          <p className="mb-4">
+            Traffic between these segments is controlled through inter-VLAN 
+            filtering using MikroTik firewall rules, ensuring that devices can only 
+            access the network resources they are permitted to use.
+          </p>
         </>
       ),
     },
@@ -33,20 +39,22 @@ export const stackData2 = {
       description:(
         <>
           <p className="mb-4">
-            NVR yang digunakan adalah merk Dahua, 
-            CCTV yang digunakan dari beberapa brand berbeda seperti Dahua, Hikvision, TP-Link, dan Yoosee.
-            Seluruh CCTV dapat terhubung ke NVR meskipun berbeda brand dengan menggunakan protocol Onvif.
+            The surveillance system is built around a Dahua Network Video Recorder (NVR), 
+            while the cameras themselves come from multiple manufacturers including Dahua, 
+            Hikvision, TP-Link, and Yoosee. Despite the different brands, all cameras 
+            are integrated into the same recording system using the ONVIF protocol, 
+            allowing centralized monitoring and management through the NVR.
           </p>
-          <h4 className="font-semibold mt-4 mb-2">Fitur yang dimanfaatkan:</h4>
+          <h4 className="font-semibold mt-4 mb-2">Key Features:</h4>
           <ul className="list-disc list-inside space-y-1 mb-4">
-            <li>NVR Record & Playback 24/7</li>
-            <li>Remote monitoring via Dahua DMSS Android</li>
-            <li>Secure channel strict via VPN WireGuard Android</li>
-            <li>Onvif profile S untuk integrasi brand berbeda</li>
-            <li>No port-forwarding to NVR</li>
+            <li>24/7 recording and playback through the NVR system</li>
+            <li>Remote monitoring via Dahua DMSS mobile application on Android</li>
+            <li>Strict secure remote access through a WireGuard VPN</li>
+            <li>Onvif profile S support to integrate camera from multiple vendors</li>
+            <li>No direct port-forwarding to the NVR</li>
           </ul>
           <p className="mb-4">
-            Cek beberapa video review dan 
+            You can also explore several CCTV 
             <a
               href="https://youtu.be/TnrT97uuThA"
                 target="_blank"
@@ -55,7 +63,7 @@ export const stackData2 = {
             >
             {" "}tutorial {" "}
             </a>
-            CCTV di YouTube: 
+            and review videos related to this setup on my YouTube Channel: 
             <a
               href="https://www.youtube.com/@FarhanLur"
                 target="_blank"
@@ -75,19 +83,27 @@ export const stackData2 = {
       description:(
         <>
           <p className="mb-4">
-            Menggunakan server FreePBX untuk manage extension dan call. 
-            IP Phone menggunakan Snom 300, Doorphone menggunakan fanvil A10, dan Softphone menggunakan Linphone app Android.
-            Serta integrasi antara VoIP, Doorphone, dan CCTV.
+            A FreePBX server is used to manage SIP extensions and call routing 
+            across the internal communication system. The setup includes several VoIP endpoints:
+          </p>
+          <ul className="list-disc list-inside space-y-1 mb-4">
+            <li>Snom 300 IP Phone for desk-based communication</li>
+            <li>Fanvil A10 Doorphone for the building entrance</li>
+            <li>Linphone (Android) used as a mobile softphone client</li>
+          </ul>
+          <p className="mb-4">
+            These devices are integrated to create a smart communication workflow 
+            that connects VoIP telephony, door access, and the CCTV monitoring system.
           </p>
           <h4 className="font-semibold mt-4 mb-2">Flow Architecture:</h4>
           <ul className="list-disc list-inside space-y-1 mb-4">
-            <li>Doorbell pressed (short circuit trigger)</li>
-            <li>Fanvil A10 send SIP call to FreePBX</li>
+            <li>Doorbell button pressed (hardware trigger)</li>
+            <li>Fanvil A10 send SIP call to FreePBX server</li>
             <li>Ring-group call activated including Linphone softphone</li>
-            <li>Webhook sent to Home Assistant</li>
-            <li>Home Assistant trigger PTZ Camera</li>
-            <li>CCTV focus on entrance</li>
-            <li>Softphone on-hook, video call trigger</li>
+            <li>A Webhook is sent to Home Assistant</li>
+            <li>Home Assistant triggers the PTZ Camera</li>
+            <li>The CCTV camera automatically focus on the entrance area</li>
+            <li>When softphone answer the call, video communication is initiated</li>
           </ul>
         </>
       ),
@@ -99,17 +115,23 @@ export const stackData2 = {
       description:(
         <>
           <p className="mb-4">
-            Digunakan sebagai monitoring energy meter 
-            untuk mengoptimalkan penggunaan listrik.
-            Juga otomasi ketika terjadi suatu event seperti webhook pada Doorphone
+            Home Assistant is used as a central automation and monitoring platform 
+            within the home infrastructure. One of its primary roles is monitoring 
+            the energy meter to help optimize electricity usage. The system also 
+            handles event-driven automations, such as processing webhook events 
+            triggered by the doorphone system.
           </p>
           <h4 className="font-semibold mt-4 mb-2">System overview:</h4>
           <ul className="list-disc list-inside space-y-1 mb-4">
-            <li>15+ device connected from 2 different site</li>
-            <li>4 automation workflows</li>
-            <li>0 public exposure port</li>
-            <li>Secure access via VPN only</li>
+            <li>15+ connected devices across two different sites</li>
+            <li>4 active automation workflows managing various system events</li>
+            <li>No publicly exposed ports to the internet</li>
+            <li>Secure access exclusively through VPN</li>
           </ul>
+          <p className="mb-4">
+            This setup ensures that all smart devices and automation processes remain 
+            secure, centralized, and remotely manageable.
+          </p>
         </>
       ),
     },

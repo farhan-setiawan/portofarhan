@@ -12,7 +12,7 @@ export default function Intro() {
         <p>Currently working in oil & gas industries.</p>
       </div>
 
-      <p className="pl-5 mt-8 italic text-gray-400">
+      <p className="pl-5 mt-4 italic text-gray-400">
         "and this is..."
       </p>
     </section>
