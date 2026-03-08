@@ -2,7 +2,7 @@ export default function Intro() {
   return (
     <section className="w-full mb-24">
         <h1 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl font-bold ">
-          PORTFOLIO
+          SELF-PROJECT
           <br />
           FARHAN
         </h1>

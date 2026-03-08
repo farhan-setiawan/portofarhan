@@ -1,12 +1,14 @@
 export default function Portfolio() {
   return (
     <section className="mb-16 -mt-10">
-      <h2 className="text-3xl font-semibold mb-10 ">
+      <h2 className="text-3xl font-semibold mb-2 ">
         MY SELF-PROJECT:
         <br />
         PRODUCTION HOME SERVER
       </h2>
-
+      <p className="mb-8 italic text-gray-400">
+        "click link below to see some of my works!"
+      </p>
       <div className="space-y-6 text-xl text-gray-700">
 
         <p>
@@ -23,7 +25,7 @@ export default function Portfolio() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline hover:text-blue-800 transition">
-                CI/CD
+                CI/CD GitHub
             </a>
         </p>
 
